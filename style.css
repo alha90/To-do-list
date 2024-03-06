@@ -1,0 +1,59 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+form input {
+    font-family: inherit;
+    padding: 10px;
+    width: 450px;
+    font-size: 1em;
+}
+form button {
+    font-family: inherit;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+.tasks {
+    margin-top: 50px;
+
+    width: inherit;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+}
+.task-to-do {
+    background-color: yellow;
+    margin-left: 100px;
+    width: 450px;
+}
+.task-done {
+    background-color: aquamarine;
+    margin-right: 100px;
+    width: 450px;
+}
+form {
+    border: 1px solid yellow;
+}
+ul {
+    height: 500px;
+    border: 1px solid black;
+}
+h1{
+    text-align: center;
+}
+
+.li-styling {
+    font-size: 1.2em;
+    list-style:upper-roman;
+    padding: 5px 4px;
+    font-weight: bold;
+    font-style: oblique;
+}
