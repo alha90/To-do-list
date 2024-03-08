@@ -7,7 +7,10 @@ form.addEventListener('submit', e => {
     const li = document.createElement('li');
     e.preventDefault()
     let arr = [];
-    arr.push(input.value);
+    // arr.push(input.value);
+    if (localStorage.length != 0) {
+        arr.push(input.value)
+    } else { arr = getElements().push(input.value)}
     localStorage.setItem('tasks', JSON.stringify(arr));
     li.appendChild(document.createTextNode(input.value));
     li.classList.add('li-styling')
