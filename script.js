@@ -9,17 +9,18 @@ form.addEventListener("submit", (e) => {
   const button = document.createElement("button");
   const button1 = document.createElement("button");
   e.preventDefault();
-  let arr;
+  let arr= [];
   let str = input.value.charAt(0).toUpperCase() + input.value.slice(1);
   if (localStorage.length != 0 && getElements("tasks")) {
     arr = getElements("tasks");
     arr.push(str);
   } else {
+    console.log(str)
     arr.push(str);
   }
 
   localStorage.setItem("tasks", JSON.stringify(arr));
-  button.setAttribute("id", "delete");
+  button.setAttribute("id", str);
   button1.setAttribute("id", "edit");
   li.append(document.createTextNode(str), button1, button);
   li.classList.add("li-styling");
@@ -45,14 +46,15 @@ window.addEventListener("load", (e) => {
   loadElements();
 });
 setTimeout(function () {
-  const taskElement = document.querySelectorAll(".task-list-pending li button");
+  const taskElement = document.querySelectorAll(".task-list-pending li");
   console.log(taskElement);
   taskElement.forEach((e) => {
+    console.log(e)
     e.addEventListener("click", (event) => {
-      //   console.log(event.target.id);
-      if (event.target.id == "edit") {
-        console.log(event.target.id);
-      }
+        // console.log(event.target.id);
+        // console.log(event.target.id);
+        console.log(event)
+        
     });
   });
 }, 1000);
