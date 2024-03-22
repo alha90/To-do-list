@@ -15,7 +15,7 @@ form.addEventListener("submit", (e) => {
     arr = getElements("tasks");
     arr.push(str);
   } else {
-    console.log(str)
+    // console.log(str)
     arr.push(str);
   }
 
@@ -45,9 +45,10 @@ function loadElements() {
 window.addEventListener("load", (e) => {
   loadElements();
 });
+
 setTimeout(function () {
   const taskElement = document.querySelectorAll(".task-list-pending li");
-  console.log(taskElement);
+  // console.log(taskElement);
   taskElement.forEach((e) => {
     console.log(e)
     e.addEventListener("click", (event) => {
