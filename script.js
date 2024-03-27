@@ -50,11 +50,17 @@ setTimeout(function () {
   const taskElement = document.querySelectorAll(".task-list-pending li");
   // console.log(taskElement);
   taskElement.forEach((e) => {
-    console.log(e)
+    // console.log(e)
     e.addEventListener("click", (event) => {
         // console.log(event.target.id);
         // console.log(event.target.id);
-        console.log(event)
+        console.log(e.innerText)
+        console.log(event.target)
+        if (event.target.id === 'edit') {
+            console.log(`About to EDIT the task: ${e.innerText}`)
+        } else if (event.target.id === 'delete') {
+            console.log(`About to DELETE the task: ${e.innerText}`)
+        }
         
     });
   });
