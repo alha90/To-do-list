@@ -57,6 +57,7 @@ setTimeout(function () {
         console.log(e.innerText)
         console.log(event.target)
         if (event.target.id === 'edit') {
+            
             console.log(`About to EDIT the task: ${e.innerText}`)
         } else if (event.target.id === 'delete') {
             console.log(`About to DELETE the task: ${e.innerText}`)
