@@ -15,3 +15,7 @@ export function getElements(data) {
   }
   return arr;
 }
+
+export function deleteElements() {
+  
+}
